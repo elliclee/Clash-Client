@@ -760,7 +760,7 @@
 "Close Connection" = "关闭连接";
 "Close all active connections?" = "关闭全部活动连接？";
 "Close connection" = "关闭连接";
-"Close connections on node switch" = "切换节点时断开连接";
+"Close connections on node switch" = "切换节点时断开已有连接";
 "Closed" = "已结束";
 "Closing the active packet tunnel." = "正在关闭当前 packet tunnel。";
 "Cloudflare DNS" = "Cloudflare DNS";
@@ -1957,7 +1957,6 @@
 "Move rule down" = "下移规则";
 "Move rule up" = "上移规则";
 "Move to File" = "移到「文件」";
-"Moves live traffic to the newly selected node immediately." = "立即把实时流量切到新选中的节点。";
 "Mozilla bundle" = "Mozilla 内置集";
 "Mullvad Unfiltered" = "Mullvad Unfiltered";
 "Multipath TCP" = "多路径 TCP";
@@ -2193,6 +2192,7 @@
 "Obfuscation needs its password. Set one, or clear the obfuscation." = "混淆需要它的密码。填一个，或者把混淆清空。";
 "Obfuscation packet size" = "混淆包大小";
 "Off" = "关闭";
+"Off keeps open connections on the node they started through. On closes them so they reconnect through the node you just picked." = "关闭时，已经打开的连接留在打开它们的节点上，直到自己结束。新连接走刚选的节点。打开后会断开已有连接，让它们立刻改走新节点。";
 "Off shows all traffic. On hides traffic sent directly to the internet (final outbound DIRECT), so dashboard numbers reflect proxy use. The VPN stays connected while Clash refreshes statistics." = "关闭时显示全部流量。开启后隐藏直连出网的流量（最终出站为 DIRECT），面板数字即代表代理用量。刷新统计期间 VPN 保持连接。";
 "Off · Dark · Large text" = "Off · Dark · Large text";
 "Off: a profile with its own DNS keeps it; the settings below still apply to profiles without one. Turn it on to change them for every profile." = "关闭时，自带 DNS 的配置用它自己的；下面的设置只对没有 DNS 的配置生效。打开后可改动所有配置。";

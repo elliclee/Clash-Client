@@ -11,8 +11,10 @@ enum NodeSwitchSettings {
         UserDefaults(suiteName: ClashAppIdentifiers.appGroup) ?? .standard
     }
 
+    /// A missing preference keeps connections that are already open.
+    /// The settings toggle is what opts into closing them.
     static func autoCloseOnSwitch(from defaults: UserDefaults = appGroupDefaults) -> Bool {
-        defaults.object(forKey: key) == nil ? true : defaults.bool(forKey: key)
+        defaults.object(forKey: key) == nil ? false : defaults.bool(forKey: key)
     }
 
     static func setAutoCloseOnSwitch(_ enabled: Bool,
