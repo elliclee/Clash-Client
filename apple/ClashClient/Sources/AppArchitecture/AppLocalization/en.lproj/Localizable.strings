@@ -1957,7 +1957,6 @@
 "Move rule down" = "Move rule down";
 "Move rule up" = "Move rule up";
 "Move to File" = "Move to File";
-"Moves live traffic to the newly selected node immediately." = "Moves live traffic to the newly selected node immediately.";
 "Mozilla bundle" = "Mozilla bundle";
 "Mullvad Unfiltered" = "Mullvad Unfiltered";
 "Multipath TCP" = "Multipath TCP";
@@ -2193,6 +2192,7 @@
 "Obfuscation needs its password. Set one, or clear the obfuscation." = "Obfuscation needs its password. Set one, or clear the obfuscation.";
 "Obfuscation packet size" = "Obfuscation packet size";
 "Off" = "Off";
+"Off keeps open connections on the node they started through. On closes them so they reconnect through the node you just picked." = "Off keeps open connections on the node they started through. On closes them so they reconnect through the node you just picked.";
 "Off shows all traffic. On hides traffic sent directly to the internet (final outbound DIRECT), so dashboard numbers reflect proxy use. The VPN stays connected while Clash refreshes statistics." = "Off shows all traffic. On hides traffic sent directly to the internet (final outbound DIRECT), so dashboard numbers reflect proxy use. The VPN stays connected while Clash refreshes statistics.";
 "Off · Dark · Large text" = "Off · Dark · Large text";
 "Off: a profile with its own DNS keeps it; the settings below still apply to profiles without one. Turn it on to change them for every profile." = "Off: a profile with its own DNS keeps it; the settings below still apply to profiles without one. Turn it on to change them for every profile.";

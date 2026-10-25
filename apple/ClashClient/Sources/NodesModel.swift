@@ -2790,15 +2790,16 @@ final class NodesModel: ObservableObject {
         }
         preferences?.saveSelection(group: group, proxy: name)
         noteRouteChanged()
+        let closeExisting = command.isConnected && shouldCloseConnectionsOnSwitch()
         ClashLogStore.shared.append(
-            "node switched  group=\(group) -> \(name)",
+            "node switched  group=\(group) -> \(name)  closeExisting=\(closeExisting)",
             stream: .app
         )
         if GlobalProxySelectionPolicy.remembers(group: group) { currentGroupName = group }
         if !command.isConnected {
             applyOfflineSelection(group: group, name: name)
         }
-        if command.isConnected, shouldCloseConnectionsOnSwitch() {
+        if closeExisting {
             await command.closeConnectionsAfterProxySelection()
         }
     }
@@ -5068,6 +5069,8 @@ final class NodesModel: ObservableObject {
         latencyTotalCount = 0
 
         guard command.isConnected else { return false }
+        // A new profile or revision replaces proxies and rules, so this close
+        // stays on even when a node switch inside one runtime keeps connections.
         await command.closeConnectionsAfterProxySelection()
          
          

@@ -103,7 +103,7 @@ struct ClientSettingsView: View {
                     .accessibilityIdentifier("client.close-connections-on-switch")
                     .onChange(of: autoClose) { NodeSwitchSettings.setAutoCloseOnSwitch($0) }
             } footer: {
-                Text("Moves live traffic to the newly selected node immediately.")
+                Text("Off keeps open connections on the node they started through. On closes them so they reconnect through the node you just picked.")
             }
 
             Section {
